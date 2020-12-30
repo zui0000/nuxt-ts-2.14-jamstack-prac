@@ -7,8 +7,8 @@
     "build": "nuxt-ts build",
     "start": "nuxt-ts start",
     "generate": "nuxt-ts generate",
-    "lint:js": "eslint .js,.ts,.vue --ignore-path .gitignore .",
-    "lintfix:js": "eslint --fix .js,.ts,.vue --ignore-path .gitignore ."
+    "lint:js": "eslint \"*.{js,ts,vue}\" --ignore-path .gitignore .",
+    "lintfix:js": "eslint --fix \"*.{js,ts,vue}\" --ignore-path .gitignore ."
   },
   "dependencies": {
     "@nuxt/typescript-runtime": "^2.0.0",
