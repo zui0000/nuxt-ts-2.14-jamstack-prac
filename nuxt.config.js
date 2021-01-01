@@ -4,11 +4,17 @@ export default {
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: 'jamstack-front',
+    titleTemplate(title) {
+      return (title ? `${title} | ` : '') + process.env.npm_package_name
+    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: process.env.npm_package_description || '',
+      },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
@@ -21,6 +27,21 @@ export default {
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
+
+  router: {
+    extendRoutes(routes, resolve) {
+      routes.push({
+        name: 'notFound',
+        path: '*',
+        component: resolve(__dirname, 'pages/index.vue'),
+      })
+    },
+  },
+
+  // 404エラーページのアドレスを404.htmlに変更する
+  generate: {
+    fallback: true,
+  },
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
