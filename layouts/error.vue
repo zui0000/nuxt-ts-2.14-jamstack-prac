@@ -26,7 +26,13 @@ import { Vue, Component } from 'nuxt-property-decorator'
 //   },
 // }
 @Component({})
-export default class extends Vue {}
+export default class extends Vue {
+  head() {
+    return {
+      title: 'PAGE NOT FOUND',
+    }
+  }
+}
 </script>
 
 <style scoped></style>

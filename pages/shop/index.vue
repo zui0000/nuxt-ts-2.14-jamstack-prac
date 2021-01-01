@@ -53,7 +53,13 @@
 import { Vue, Component } from 'nuxt-property-decorator'
 
 @Component({})
-export default class extends Vue {}
+export default class extends Vue {
+  head() {
+    return {
+      title: '店舗情報',
+    }
+  }
+}
 </script>
 
 <style scoped>
