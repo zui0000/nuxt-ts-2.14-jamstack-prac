@@ -1,4 +1,16 @@
+const { API_KEY, API_URL } = process.env
 export default {
+  // フロントエンドで使用するための環境変数
+  // 主にAPIのURLやグローバルで利用した値を定義する
+  publicRuntimeConfig: {
+    apiUrl: API_URL,
+  },
+
+  // サーバーサイドで利用するための環境変数
+  // APIのKEYなど、クライアントサイドから参照されたくない重要な値を定義する
+  privateRuntimeConfig: {
+    apiKey: API_KEY,
+  },
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
 
