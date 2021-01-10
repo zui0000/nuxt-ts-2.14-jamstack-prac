@@ -82,3 +82,4 @@ export default class extends Vue {
   background-image: url('~@/assets/img/visual-error.jpg');
 }
 </style>
+"#fc05f0"
