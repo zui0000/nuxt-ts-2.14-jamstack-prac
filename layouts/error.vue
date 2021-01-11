@@ -14,17 +14,6 @@
 
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator'
-// const config = {
-//   router: {
-//     extendRoutes(routes, resolve) {
-//       routes.push({
-//         name: 'notFound',
-//         path: '*',
-//         component: resolve(__dirname, 'pages/index.vue'),
-//       })
-//     },
-//   },
-// }
 @Component({})
 export default class extends Vue {
   head() {
