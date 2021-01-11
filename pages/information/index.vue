@@ -38,7 +38,6 @@ export default class extends Vue {
     const { data } = await axios.get(`${$config.apiUrl}/information`, {
       headers: { 'X-API-KEY': $config.apiKey },
     })
-    console.log(data)
     return {
       items: data.contents,
     }
