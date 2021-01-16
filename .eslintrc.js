@@ -49,5 +49,7 @@ module.exports = {
     '@typescript-eslint/no-explicit-any': 0,
     // カンマエラーをオフにする
     'no-sequences': 'off',
+    // v-htmlを許可する
+    'vue/no-v-html': 'off',
   },
 }

@@ -14,7 +14,7 @@
     "strict": true,
     "noEmit": true,
     "experimentalDecorators": true,
-    "baseUrl": ".",
+    "baseUrl": "./",
     "paths": {
       "~/*": [
         "./*"
@@ -25,9 +25,13 @@
     },
     "types": [
       "@types/node",
-      "@nuxt/types"
+      "@nuxt/types",
+      "@types/sanitize-html"
     ]
   },
+  "files": [
+    "@types/vue.shim.d.ts"
+  ],
   "exclude": [
     "node_modules",
     ".nuxt",

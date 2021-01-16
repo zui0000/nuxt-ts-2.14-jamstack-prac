@@ -1,5 +1,12 @@
 # jamstack-front
+``` bash
+$ touch .env
 
+# BASE_URL=http://localhost:7000
+# API_KEY=
+# API_URL=
+
+```
 ## Build Setup
 
 ```bash
